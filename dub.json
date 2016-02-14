@@ -1,0 +1,9 @@
+{
+	"name": "smidig-minimal",
+	"description": "A minimal D application.",
+	"copyright": "Copyright © 2015, profan",
+	"authors": ["profan"],
+	"dependencies": {
+		"smidig" : "~master"
+	}
+}
