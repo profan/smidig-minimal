@@ -51,11 +51,22 @@ struct Game {
 			// set new update rate
 			engine_.update_rate = 60;
 
+			// bind esc to quit, backspace to fullscreen
+			import derelict.sdl2.types;
+			engine_.input.bindKeyEvent(SDL_SCANCODE_ESCAPE, &quit)
+				.bindKeyEvent(SDL_SCANCODE_BACKSPACE, &engine_.window_.toggleFullscreen);
+
 			return Error.Success;
 
 		}
 
 	} //create
+
+	void quit() {
+
+		engine_.window_.is_alive = false;
+
+	} //quit
 
 	void update() {
 
